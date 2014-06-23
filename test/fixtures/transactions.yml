@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+credit:
+  id: 1
+  account_id: 1
+  amount: 500
+  name: "credit"
+  description: "Initial credit amount"
+debit:
+  id: 2
+  account_id: 1
+  amount: 500
+  name: "debit"
+  description: "Initial debit amount"

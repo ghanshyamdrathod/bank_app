@@ -1,0 +1,5 @@
+%h1 Your Dashboard
+%div
+  Your account balance: #{current_user.balance}
+%div= link_to 'Transfer Fund', new_transaction_path
+%div= link_to 'Mini Statement', transactions_path

@@ -1,0 +1,21 @@
+%h1 Transactions History
+%table{:border => "1px;", :width => "100%"}
+  %thead
+    %tr
+      %th Sr No.
+      %th Date
+      %th Description
+      %th Debit
+      %th Credit
+  %tbody
+    - @transactions.each_with_index do |transaction, index|
+      %tr
+        %td= index + 1
+        %td= transaction.created_at.strftime("%m-%d-%Y")
+        %td= transaction.description
+        %td= transaction.name.eql?('debit')? transaction.amount : ''
+        %td= transaction.name.eql?('credit')? transaction.amount : ''
+%br
+  %div= link_to 'Transfer Fund', new_transaction_path
+  %br/
+  %div= link_to 'Back', accounts_path

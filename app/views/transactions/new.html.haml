@@ -1,0 +1,5 @@
+%h1 New transaction
+- if notice
+  %p#error_explanation= notice
+= render 'form'
+%div= link_to 'Back', accounts_path
