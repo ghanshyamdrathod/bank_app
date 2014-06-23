@@ -24,3 +24,5 @@ user can transfer fund to other accounts visible to user.
 
 User can check his/her ministatement history.
 
+Run test cases using 'rake test test/models/'
+
