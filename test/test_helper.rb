@@ -12,6 +12,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
     def self.api_fixtures
     #print "setting up the api_fixtures"
-    fixtures :users #, :user_roles, :changesets, :changeset_tags
+    fixtures :users, :accounts #, :user_roles, :changesets, :changeset_tags
   end
 end

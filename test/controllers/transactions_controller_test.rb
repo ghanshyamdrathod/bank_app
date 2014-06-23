@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class TransactionsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+  api_fixtures
+
   setup do
-    @transaction = transactions(:one)
+    sign_in users(:normal_user)
+    @transaction = transactions(:credit)
   end
 
   test "should get index" do
@@ -16,34 +20,4 @@ class TransactionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create transaction" do
-    assert_difference('Transaction.count') do
-      post :create, transaction: {  }
-    end
-
-    assert_redirected_to transaction_path(assigns(:transaction))
-  end
-
-  test "should show transaction" do
-    get :show, id: @transaction
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @transaction
-    assert_response :success
-  end
-
-  test "should update transaction" do
-    patch :update, id: @transaction, transaction: {  }
-    assert_redirected_to transaction_path(assigns(:transaction))
-  end
-
-  test "should destroy transaction" do
-    assert_difference('Transaction.count', -1) do
-      delete :destroy, id: @transaction
-    end
-
-    assert_redirected_to transactions_path
-  end
 end

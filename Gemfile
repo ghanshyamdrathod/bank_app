@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'validates_email_format_of', '>= 1.5.1'
-gem 'haml-rails', :group => :development
+gem 'haml-rails'#, :group => :development
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
@@ -46,4 +46,6 @@ gem 'formtastic', github: 'justinfrench/formtastic'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+group :development, :test do
+    gem 'factory_girl_rails'
+end

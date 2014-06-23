@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 normal_user:
   id: 1
-  email: test@openstreetmap.org
+  email: test@me.org
   encrypted_password: <%= Digest::MD5.hexdigest('test') %>
   created_at: "2014-06-15 00:00:00"
   name: test

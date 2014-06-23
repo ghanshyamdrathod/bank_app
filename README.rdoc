@@ -1,27 +1,26 @@
 == README
 
-Unzip application folder.
-open application root folder.
+Clone application from github.
 
-run bundle install command.
+Install all gems using 'run bundle install'.
 
-run rake db:create and rake db:migrate command for databse setup.
+Create Database using 'rake db:create' command.
+Setup Database using 'rake db:migrate' command.
 
-open console: rails c
+Start application : rails s
 
-create sample users:
+Go to admin interface : http://localhost:3000/admin
 
-User.create(:email => "user@mailop.com", :password=> "123123123", :name => 'Mr. Sunil')
+user-name : admin@example.com
+Password: password
 
-Account record is creates for user after_create hook, and initial amount with 100 is added with 'credit' flag.
+Add user into application via 'http://localhost:3001/admin/users'
 
-To add amount via console use below command:
- u.credit_amount(500, 'Add description message here')
+Bydefault system will credit amount of 100 to account.
 
-now run rails application from console using 'rails s' command, this will start application on http://localhost:3000
+User can access application via : http://localhost:3001/
 
-Please log in to the application for tranfer money in to other account.
+user can transfer fund to other accounts visible to user.
 
-You can see Dashboard with current balance.
-To transfer fun click on 'Transfer fund', add amount and select user from drop-down menu.
-You can able to see whole account history, click on 'Mini Statement' link.
+User can check his/her ministatement history.
+
